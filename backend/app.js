@@ -18,17 +18,36 @@ import reviewRoutes from "./routes/reviewRoutes.js";
 const app = express();
 app.set("trust proxy", 1);
 // Security / Middleware
+// app.use(
+//     cors({
+//         origin: (origin, callback) => {
+//             if (!origin) return callback(null, true);
+//             if (
+//                 /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin) ||
+//                 origin === process.env.FRONTEND_URL
+//             ) {
+//                 return callback(null, true);
+//             }
+//             callback(new Error("Not allowed by CORS"));
+//         },
+//         credentials: true,
+//     })
+// );
+const allowedOrigins = [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "https://kaju-mehndi-artist.vercel.app",
+];
+
 app.use(
     cors({
         origin: (origin, callback) => {
-            if (!origin) return callback(null, true);
-            if (
-                /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin) ||
-                origin === process.env.FRONTEND_URL
-            ) {
+            if (!origin || allowedOrigins.includes(origin)) {
                 return callback(null, true);
             }
-            callback(new Error("Not allowed by CORS"));
+
+            console.log("Blocked CORS Origin:", origin);
+            return callback(new Error("Not allowed by CORS"));
         },
         credentials: true,
     })
