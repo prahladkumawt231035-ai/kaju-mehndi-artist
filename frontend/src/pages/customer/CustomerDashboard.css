@@ -1,0 +1,187 @@
+/* ====================================================
+   CUSTOMER DASHBOARD STYLES — Kaju Mehndi Artist
+   ==================================================== */
+
+.customer-page {
+    background: #F4EBDD;
+    min-height: 100vh;
+    padding-bottom: 90px;
+}
+
+.customer-hero {
+    background: linear-gradient(135deg, #3D2117, #70452C);
+    color: #FFFDF8;
+    padding: 50px 6%;
+    text-align: center;
+}
+
+.customer-tag {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #B89A70;
+    font-weight: 700;
+}
+
+.customer-hero h1 {
+    font-size: clamp(30px, 4vw, 48px);
+    margin: 8px 0;
+    color: #FFFDF8;
+}
+
+.customer-hero p {
+    font-size: 15px;
+    color: rgba(232, 213, 189, 0.85);
+}
+
+.customer-container {
+    max-width: 1000px;
+    margin: 30px auto 0;
+    padding: 0 5%;
+}
+
+.customer-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.c-stat-card {
+    background: #FFFDF8;
+    border: 1.5px solid rgba(184, 154, 112, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.c-stat-card span {
+    display: block;
+    font-size: 12px;
+    color: #755C4C;
+    text-transform: uppercase;
+}
+
+.c-stat-card strong {
+    font-size: 22px;
+    color: #3D2117;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.customer-card-box {
+    background: #FFFDF8;
+    border: 1.5px solid rgba(184, 154, 112, 0.3);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 30px rgba(61, 33, 23, 0.06);
+}
+
+.customer-card-box h2 {
+    font-size: 22px;
+    color: #3D2117;
+    margin-bottom: 20px;
+}
+
+.customer-bookings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.customer-booking-card {
+    background: #F4EBDD;
+    border: 1px solid rgba(184, 154, 112, 0.35);
+    border-radius: 14px;
+    padding: 24px;
+    transition: all 0.2s ease;
+}
+
+.cb-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+}
+
+.cb-id {
+    font-size: 11px;
+    color: #B89A70;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.cb-header h3 {
+    font-size: 18px;
+    color: #3D2117;
+    margin: 2px 0 0;
+}
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-confirmed { background: #25D366; color: white; }
+.status-completed { background: #70452C; color: white; }
+.status-pending { background: #f39c12; color: white; }
+
+.cb-details {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    font-size: 13.5px;
+    color: #755C4C;
+}
+
+.cb-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cb-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(184, 154, 112, 0.25);
+    padding-top: 14px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.cb-payment-info {
+    font-size: 13.5px;
+    color: #3D2117;
+}
+
+.cb-wa-chat {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.cb-wa-chat:hover {
+    background: #128C7E;
+}
+
+@media (max-width: 650px) {
+    .customer-stats {
+        grid-template-columns: 1fr;
+    }
+    .cb-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

@@ -1,0 +1,193 @@
+.admin-login-page {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    background: radial-gradient(circle at center, #23140E 0%, #170A06 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.admin-login-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(184, 154, 112, 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+}
+
+.admin-login-card {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(145deg, #2D1A12 0%, #1F110B 100%);
+    border: 1px solid rgba(184, 154, 112, 0.4);
+    border-radius: 18px;
+    padding: 2.8rem 2.4rem;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(184, 154, 112, 0.15);
+}
+
+.admin-login-badge-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+}
+
+.admin-login-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(184, 154, 112, 0.15);
+    border: 1px solid rgba(184, 154, 112, 0.4);
+    color: #E8D5BD;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+}
+
+.admin-logo-center {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.admin-login-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.admin-login-heading h2 {
+    font-family: var(--font-serif, "Playfair Display", serif);
+    color: #FFFDF8;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.admin-login-heading p {
+    color: #B89A70;
+    font-size: 0.88rem;
+}
+
+.admin-error-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: rgba(220, 53, 69, 0.15);
+    border: 1px solid rgba(220, 53, 69, 0.4);
+    color: #ff8b94;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.admin-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.admin-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.admin-field label {
+    color: #E8D5BD;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.admin-field .input-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(184, 154, 112, 0.3);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: all 0.25s ease;
+}
+
+.admin-field .input-with-icon:focus-within {
+    border-color: #B89A70;
+    box-shadow: 0 0 0 3px rgba(184, 154, 112, 0.2);
+}
+
+.admin-field .input-with-icon svg {
+    color: #B89A70;
+}
+
+.admin-field input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #FFFDF8;
+    font-size: 0.95rem;
+}
+
+.admin-field input::placeholder {
+    color: rgba(232, 213, 189, 0.35);
+}
+
+.admin-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background: linear-gradient(135deg, #B89A70 0%, #8A6D47 100%);
+    color: #1F110B;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.admin-submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(184, 154, 112, 0.35);
+}
+
+.admin-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.admin-security-note {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(184, 154, 112, 0.2);
+}
+
+.admin-security-note p {
+    color: rgba(232, 213, 189, 0.6);
+    font-size: 0.75rem;
+    margin-bottom: 0.8rem;
+}
+
+.back-to-site-link {
+    color: #B89A70;
+    font-size: 0.82rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.back-to-site-link:hover {
+    color: #FFFDF8;
+    text-decoration: underline;
+}
