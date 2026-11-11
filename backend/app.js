@@ -16,7 +16,7 @@ import enquiryRoutes from "./routes/enquiryRoutes.js";
 import reviewRoutes from "./routes/reviewRoutes.js";
 
 const app = express();
-
+app.set("trust proxy", 1);
 // Security / Middleware
 app.use(
     cors({
