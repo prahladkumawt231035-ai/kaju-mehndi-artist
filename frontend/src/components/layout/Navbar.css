@@ -382,3 +382,70 @@
         font-size: 12px;
     }
 }
+
+/* ===== MOBILE NAVBAR FIX ===== */
+@media (max-width: 600px) {
+
+    .navbar {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 4%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+
+    .navbar-scrolled {
+        padding: 10px 4%;
+    }
+
+    /* Hide desktop navigation */
+    .nav-links {
+        display: none !important;
+    }
+
+    /* Hide unnecessary desktop buttons */
+    .nav-whatsapp-btn,
+    .nav-user-cluster,
+    .nav-signin-btn,
+    .book-btn {
+        display: none !important;
+    }
+
+    /* Keep logo on left */
+    .navbar > *:first-child {
+        flex-shrink: 1;
+        min-width: 0;
+    }
+
+    /* Keep hamburger on right */
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-left: auto;
+        flex-shrink: 0;
+        gap: 0;
+    }
+
+    .hamburger {
+        display: flex !important;
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1001;
+    }
+
+    /* Mobile drawer width fix */
+    .mobile-drawer {
+        box-sizing: border-box;
+        width: min(320px, 85vw);
+        height: 100dvh;
+    }
+}
